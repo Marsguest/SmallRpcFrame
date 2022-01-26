@@ -1,0 +1,22 @@
+package com.gscsd.smrpc;
+
+import lombok.Data;
+
+/**
+ * 表示RPC的返回
+ */
+@Data
+public class Response {
+    /**
+     * 服务的返回状态码 0-成功 非0-失败
+     */
+    private int code = 0;
+    /**
+     * 具体的错误信息
+     */
+    private String message = "ok";
+    /**
+     * 返回的数据
+     */
+    private Object data;
+}
