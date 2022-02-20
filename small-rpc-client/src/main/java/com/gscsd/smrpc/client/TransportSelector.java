@@ -6,7 +6,7 @@ import com.gscsd.smrpc.transport.TransportClient;
 import java.util.List;
 
 /**
- * 表示选择哪个server去连接
+ * 表示选择哪个client连接对象去连接
  */
 public interface TransportSelector {
 

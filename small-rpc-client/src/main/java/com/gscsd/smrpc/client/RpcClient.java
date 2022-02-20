@@ -24,7 +24,7 @@ public class RpcClient {
         this.transportSelector = ReflectionUtils.newInstance(this.rpcClientConfig.getSelectorClass());
 
         this.transportSelector.init(
-                this.rpcClientConfig.getServers(),
+                this.rpcClientConfig.getServers(),//这里目前是写死的 如果添加注册中心就是加在这个地方
                 this.rpcClientConfig.getConnectCount(),
                 this.rpcClientConfig.getTransportCLass()
         );

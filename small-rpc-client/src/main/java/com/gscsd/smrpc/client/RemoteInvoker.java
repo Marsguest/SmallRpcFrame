@@ -53,7 +53,7 @@ public class RemoteInvoker implements InvocationHandler {
         TransportClient client = null;
         Response resp = null;
         try {
-            client = selector.select();
+            client = selector.select();//选择一个客户端连接对象
             byte[] outBytes = encoder.encode(request);
             InputStream revice = client.write(new ByteArrayInputStream(outBytes));
 
